@@ -2074,7 +2074,7 @@
             
             promptResult.style.display = 'block';
             
-            if (prompt.trim() === 'Create image.') {
+            if (prompt.trim() === 'Create.') {
                 promptContent.classList.add('hidden');
                 emptyPrompt.style.display = 'block';
                 copyBtn.classList.add('hidden');
@@ -2138,14 +2138,14 @@
         
         // Function to generate the prompt text in natural language
         function generatePrompt() {
-            let prompt = 'Create image. ';
+            let prompt = 'Create ';
             let hasContent = false;
             
             // Art Style
             const artStyle = document.getElementById('artStyle').value;
             const customArtStyle = document.getElementById('customArtStyle').value;
             if (artStyle || customArtStyle) {
-                prompt += `Art style: ${artStyle || ''}${artStyle && customArtStyle ? ' ' : ''}${customArtStyle || ''}, `;
+                prompt += ` ${artStyle || ''}${artStyle && customArtStyle ? ' ' : ''}${customArtStyle || ''}, `;
                 hasContent = true;
             }
             
